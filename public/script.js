@@ -3,9 +3,13 @@ function render_result(){
 	var hashtag = $("#hashtag-input").val();
 	jQuery.ajax({
 		url: "https://twitter-rest.herokuapp.com/tweets/" + hashtag,
-		context: document.body
+		context: document.body,
 	}).done(function(data) {
-		jQuery("#result-section").html(data);
+		var tweets = data["tweets"];
+		$("#result-section").html("");
+		$.each(tweets, function(index, tweet){
+			$("#result-section").append("<div>" + (index+1) + ": " + tweet.message + "</div>");
+		});
 		console.log(data);
 	});
 }
