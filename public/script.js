@@ -8,7 +8,10 @@ function render_result(){
 		var tweets = data["tweets"];
 		$("#result-section").html("");
 		$.each(tweets, function(index, tweet){
-			$("#result-section").append("<div>" + (index+1) + ": " + tweet.message + "</div>");
+			var user = tweet["user"];
+			var message = tweet["message"];
+			var html = (index+1) + ": " + tweet.user + " says '" + tweet.message + "'";
+			$("#result-section").append("<div>" + html + "</div>");
 		});
 		console.log(data);
 	});
