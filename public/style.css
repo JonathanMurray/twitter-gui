@@ -1,3 +1,29 @@
-#result-section{
-	margin-top: 2em;
+html{
+	color: #333;
+}
+
+body{
+	width: 85%;
+	margin: auto;
+}
+
+#header-section{
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.author{
+	width: 15%;
+	padding: 0.5em;
+	clear: left;
+	float: left;
+	color: orange;
+}
+
+.message{
+	float: left;
+	padding: 0.5em;
+	border-top: 1px solid #BBB;
+	width: 75%;
+	font-size: 0.8em;
 }

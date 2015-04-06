@@ -9,12 +9,14 @@
 		</title>
 	</head>
 	<body>
-		<h1>Recent tweets</h1>
-		<div>
-			<label>
-				Hashtag: <input id="hashtag-input" type="text"/>
-			</label>
-			<button id="go-button" onclick="render_result()"> Go. </button>
+		<div id="header-section">
+			<h1>Recent tweets</h1>
+			<div>
+				<label>
+					#hashtag: <input id="hashtag-input" type="text" autofocus/>
+				</label>
+				<button id="go-button" onclick="query_and_render()"> Go! </button>
+			</div>
 		</div>
 		<div id="result-section">
 
